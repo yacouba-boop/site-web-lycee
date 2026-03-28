@@ -1,0 +1,449 @@
+:root{
+    --couleur-nav2: rgb(27, 188, 233);
+    --couleur-nav1: rgb(255, 165, 0);
+    --ombre: 2px 4px 10px black;
+    --couleur-principale: whitesmoke;
+    --marge-composants: 2.4vw;
+    --arrondissement-bordures-composants: 5vw;
+    --bordure-hover: 1vw solid var(--couleur-nav2);
+    --transformation-hover: scale(1.02);
+    --transition: 0.3s ease;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+    background-color: rgb(202, 251, 240);
+    /*background-image: url(../images/image.webp);*/
+    background-size:contain;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+header {
+    display: block;
+    background-color: orange;
+    align-items: center;
+    box-shadow: var(--ombre);
+    justify-content: space-between;
+}
+
+.carte{
+    padding: 1vw;
+    background-color: rgb(159, 147, 130);
+}
+
+.contacts{
+    padding: 1vw;
+    background-color: antiquewhite;
+}
+
+.header-nav1 {
+    display: flex;
+    align-items: center;
+    padding: 0.1vw;
+    padding-left: 1vw;
+    border-bottom: 0.3vw solid rgb(27, 82, 137);
+    justify-content: space-between;
+}
+
+.header-nav2 {
+    background-color: var(--couleur-nav2);
+    padding: 0.1vw;
+}
+
+
+.header-nav1 ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    width: 50vw;
+    font-size: 118%;
+    text-shadow: 2px 2px 3px rgb(112, 68, 6);
+    justify-content: right;
+    padding-right: 3vw;
+}
+
+.header-nav2 ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    width: 100vw;
+    font-size: 118%;
+    text-shadow: 2px 2px 3px rgb(30, 122, 141);
+    justify-content: left;
+}
+
+.header-nav1 li{
+    padding: 1vw;
+}
+
+.header-nav2 li{
+    padding: 1vw;
+}
+
+.header-nav1 ul li:hover{
+    background-color: rgb(212, 149, 33);
+    border-radius: 2vw;
+}
+
+.header-nav2 ul li:hover{
+    background-color: rgb(28, 155, 180);
+    border-radius: 2vw;
+}
+
+
+li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    padding: 8px;
+}
+
+.accueil {
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.accueilcontent h1{
+    font-size: 5vw;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    color: orange;
+    text-shadow: var(--ombre);
+}
+.accueilcontent p{
+    font-size: 3vw;
+    text-align: left;
+    line-height: 5vw;
+    color: white;
+    text-shadow: var(--ombre);
+}
+.accueilcontent {
+    padding: 2vw;
+}
+
+
+.propos {
+    display: grid;
+    color: white;
+    text-shadow: var(--ombre);
+    width: 95vw;
+    margin: var(--marge-composants);
+    margin-bottom: 40vw;
+    aspect-ratio: 3/1;
+    box-shadow: var(--ombre);
+    grid-template-rows: 25vw 10vw;
+}
+
+
+.footer-contenu {
+    display: grid;
+    grid-template-areas: "infos1" "infos2" "infos";
+}
+
+.contact {
+    box-shadow: -2px -2px 10px black;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 80vw;
+}
+
+.infos {
+    background-color: var(--couleur-principale);
+    grid-area: infos;
+}
+
+.liens {
+    padding: 20px;
+    width: 20vw;
+    background-color: rgb(153, 176, 196);
+}
+
+.footer-partie2 {
+    grid-area: infos2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0;
+    aspect-ratio: 3/1;
+}
+
+* h2 {
+    text-align: center;
+    color: white;
+    text-shadow: var(--ombre);
+    font-size: 2vw;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.liens a {
+    text-decoration: none;
+    color: blue;
+}
+
+.contact a {
+    text-decoration: none;
+    color: blue;
+}
+
+.options {
+    display: none;
+    cursor: pointer;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+}
+
+
+.propos:hover{
+    cursor: pointer;
+}
+
+.footer-partie1:hover{
+    cursor: pointer;
+}
+
+/*
+@media screen and (max-width: 768px) {
+    .navigation {
+        display: none;
+        flex-direction: column;
+    }
+
+    .options {
+        display: block;
+        padding: 20px;
+        font-size: 25px;
+        text-shadow: 2px 2px 10px black;
+        color: rgb(255, 255, 255);
+
+    }
+
+    .header-nav2 {
+        display: none;
+    }
+
+    .accueilcontent {
+        font-size: 7cqw;
+        line-height: 20cqw;
+        word-spacing: -1px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-shadow: 2px 2px 10px black;
+        color: var(--couleur-nav2);
+        text-align: center;
+    }
+    .accueil{
+        align-items: end;
+    
+    .propos{
+        aspect-ratio: 1;
+    }
+    .footer-partie1{
+        aspect-ratio: 2/1;
+    }
+    .footer-partie2{
+        display: block;
+    }
+    .contact{
+        width: 100%;
+        aspect-ratio: 2/1;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+    .contacts{
+        background-color: rgb(213, 237, 192);
+        padding: 1vw;
+        width: 50vw;
+    }
+    .carte{
+        background-color: aqua;
+        padding: 20px;
+    }
+    .liens{
+        width: 100%;
+    }
+    .header-nav1 .logo{
+        font-size: 1.5vw;
+    }
+}
+}
+*/
+
+.logo{
+    text-shadow:var(--ombre);
+    font-size: 1.3vw;
+    text-transform: uppercase;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+.texte-logo{
+    width: 45vw;
+    font-size: 1vw;
+}
+
+.redirections-rapides{
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 0.5fr 2fr 0.5fr 2fr 0.5fr 2fr 0.5fr;
+    grid-template-rows: 30vw;
+    margin-bottom: 40vw;
+}
+
+.red1{
+    grid-column: 2;
+    background-color: aqua;
+    padding: 1vw;
+    display: grid;
+    grid-template-rows: 85% 15%;
+}
+
+.red2{
+    grid-column: 4;
+    background-color: rgb(152, 194, 194);
+    padding: 1vw;
+    display: grid;
+    grid-template-rows: 85% 15%;
+}
+.red3{
+    grid-column: 6;
+    background-color: rgb(147, 189, 226);
+    padding: 1vw;
+    display: grid;
+    grid-template-rows: 85% 15%;
+}
+.red4{
+    grid-column: 8;
+    background-color: rgb(133, 211, 192);
+    padding: 1vw;
+    display: grid;
+    grid-template-rows: 85% 15%;
+}
+
+
+.actualites{
+    display: grid;
+    grid-template-columns: 2fr 2fr 0.5fr 2fr 0.5fr 2fr 2fr;
+    grid-template-rows: 30vw 4vw 30vw;
+    margin-bottom: 40vw;
+}
+.actu1{
+    grid-row: 1;
+    grid-column: 2;
+    background-color: rgb(177, 157, 115);
+    display: grid;
+    grid-template-rows: 85% 15%;
+    padding: 1vw;
+}
+.actu2{
+    grid-row: 1;
+    grid-column: 4;
+    background-color: rgb(148, 185, 173);
+    display: grid;
+    grid-template-rows: 85% 15%;
+    padding: 1vw;
+}
+.actu3{
+    grid-row: 1;
+    grid-column: 6;
+    background-color: olive;
+    display: grid;
+    grid-template-rows: 85% 15%;
+    padding: 1vw;
+}
+.actu4{
+    grid-row: 3;
+    grid-column: 2;
+    background-color: blueviolet;
+    display: grid;
+    grid-template-rows: 85% 15%;
+    padding: 1vw;
+}
+.actu5{
+    grid-row: 3;
+    grid-column: 4;
+    background-color: aquamarine;
+    display: grid;
+    grid-template-rows: 85% 15%;
+    padding: 1vw;
+}
+.actu6{
+    grid-row: 3;
+    grid-column: 6;
+    background-color: antiquewhite;
+    display: grid;
+    grid-template-rows: 85% 15%;
+    padding: 1vw;
+}
+main, footer, div{
+    background: transparent;
+}
+.mot-du-directeur{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    aspect-ratio: 2/1;
+    margin-bottom: 40vw;
+}
+.photo-directeur{
+    background-color: aliceblue;
+}
+.paroles-directeur{
+    background-color: rgb(161, 161, 191);
+    padding: 1vw;
+    display: grid;
+    grid-template-rows: 90% 10%;
+}
+#actualite{
+    margin-bottom: 5vw;
+    padding-top: 10vw;
+}
+#mot-du-directeur{
+    margin-bottom: 5vw;
+    padding-top: 10vw;
+}
+#propos{
+    margin-bottom: 5vw;
+    padding-top: 10vw;
+}
+#contact{
+    margin-bottom: 5vw;
+    padding-top: 10vw;
+}
+.inscriptions{
+    background-color: beige;
+    padding: 1vw;
+}
+.les-informations-du-lycee{
+    padding: 1vw;
+    display: grid;
+    grid-template-rows: 77% 23%;
+}
+.bouton{
+    display: flex;
+    padding: 1vw;
+}
+
+.h2 a{
+    text-decoration: none;
+    text-shadow: none;
+    color: transparent;
+    -webkit-text-stroke: 0.1vw black;
+}
